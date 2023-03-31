@@ -8,14 +8,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 26px 22px 56px;
+    padding: 20px 26px 22px 56px;
     background: #070D18;
     border-bottom: 1px solid #FFFFFF29;
 }
 
 h1 a,
 nav a,
-header .righr-nav button {
+header nav button {
     color: #fff;
 }
 
@@ -26,41 +26,32 @@ header h1 a {
 
 header nav {
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 82px;
 }
 
 header nav a {
+    position: relative;
     font-size: 16px;
     font-weight: 400;
+    flex-shrink: 0;
+    line-height: 2.5;
 }
 
-header nav a:nth-child(1) {
-    margin-right: 82px;
+header nav a:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    width: 180%;
+    height: 4px;
+    left: calc(50%);
+    bottom: -24px;
+    transform: translateX(-50%);
+    background: #42BDEC;
+
 }
 
-header nav a:nth-child(1)::after {
-    content: '';
-    display: block;
-    border-bottom: 3px solid #42BDEC;
-}
-
-header nav a:nth-child(2) {
-    margin-right: 70px;
-}
-
-header nav a:nth-child(3) {
-    margin-right: 60px;
-}
-
-header nav a:nth-child(4) {
-    margin-right: 62px;
-}
-
-header .righr-nav {
-    display: flex;
-    align-items: center;
-}
-
-header .righr-nav button {
+header nav>button {
     border: 1px solid #42BDEC;
     border-radius: 6px;
     padding: 10px 26px;
@@ -72,7 +63,9 @@ header .righr-nav button {
 공통 container
 ============================*/
 .container {
-    width: 1270px;
+    max-width: 1274px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
 }
 
@@ -123,11 +116,11 @@ section01
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 5px;
 }
 
 .section01 .left-box .user-box .star-box .star img {
     object-fit: contain;
+    margin-right: 4px;
 }
 
 .section01 .left-box .user-box .star-box p {
@@ -155,7 +148,10 @@ section01
 
 .section01 .center-box {
     padding-top: 88px;
-    padding-bottom: 50px;
+}
+
+.section01 .center-box h2 {
+    margin-bottom: 50px;
 }
 
 .section01 .center-box h2,
@@ -246,7 +242,7 @@ section01
     height: 238px;
     position: relative;
     right: 67px;
-    bottom: 415px;
+    bottom: 364px;
     margin-left: auto;
     border-radius: 22px;
     color: #fff;
@@ -332,6 +328,10 @@ section01
     font-weight: 400;
 }
 
+
+/*==========================
+section02
+============================*/
 .section02 {
     margin-top: 108px;
     border-bottom: 1px solid #D9D9D9;
@@ -365,16 +365,17 @@ section01
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 116px;
 }
 
 .section02 .article_group>article {
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
     border-radius: 20px;
-    padding: 24px 24px 50px;
+    padding: 25px 25px 50px;
 }
 
 .section02 .article_group>article:nth-child(2) .article-img {
@@ -417,6 +418,10 @@ section01
     background: #F1F1F1;
 }
 
+
+/*==========================
+section03
+============================*/
 .section03 {
     margin-top: 84px;
 }
@@ -433,15 +438,16 @@ section01
 .section03 .article_group {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 46px;
 }
 
 .section03 .article_group>article {
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    flex: 1;
     margin-bottom: 110px;
 }
 
@@ -514,9 +520,10 @@ section01
     line-height: 1.8;
     letter-spacing: 1px;
     font-weight: 500;
+    margin-bottom: 14px;
 }
 
-.section03 .article_group article>p:last-child {
+.section03 .article_group article>p:last-of-type {
     font-size: 16px;
     line-height: 1.8;
     letter-spacing: 1px;
@@ -525,10 +532,10 @@ section01
     text-align: center;
 }
 
-.section03 .article_group article:not(:last-child) {
-    margin-right: 46px;
-}
 
+/*==========================
+section04
+============================*/
 .section04 {
     position: relative;
     background: #070D18;
@@ -616,6 +623,14 @@ section01
     font-weight: 400;
 }
 
+
+/*==========================
+section05
+============================*/
+.section05 {
+    margin-bottom: 90px;
+}
+
 .section05 .tit-box {
     margin-top: 118px;
     margin-bottom: 86px;
@@ -637,6 +652,16 @@ section01
     font-weight: 400;
     color: #6A6A6A;
     text-align: center;
+}
+
+.section05 .tit-box>a {
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #6E00FA;
+    text-decoration: underline;
+    text-align: right;
 }
 
 .section05 .stit-box {
