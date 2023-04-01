@@ -8,7 +8,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     // 화면의 넓이가 320px 이상일 때
-    400: {
+    300: {
       slidesPerView: 1,
       spaceBetween: 20,
     },
