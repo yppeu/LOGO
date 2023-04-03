@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+.burger {
+    /* display: none; */
+}
+
+.burger div {
+    background: #fff;
+    width: 45px;
+    height: 5px;
+    margin: 5px;
+    transition: all 0.5s;
+    border-radius: 3px;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+}
 
 /*==========================
 header
@@ -210,7 +234,7 @@ section01
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    margin-top: 76px;
+    margin-top: 46px;
 }
 
 .section01 .txt-group .txt-box {
@@ -1146,6 +1170,10 @@ footer>p {
 
     .section01 .center-box p {
         font-size: 18px;
+    }
+
+    .section03 .article_group>article {
+        margin-bottom: 35px;
     }
 
     .section06 .simply-group {
